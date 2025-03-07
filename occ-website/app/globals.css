@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 60 100% 50%;
+    --radius: 0.5rem;
+
+    /* Aurora variables */
+    --white: #fff;
+    --black: #000;
+    --transparent: transparent;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --indigo-300: #a5b4fc;
+    --violet-200: #ddd6fe;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+    /* Removed cursor: none; */
+  }
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    /* Removed cursor: none; */
+  }
+}
+
+/* Hero background styles */
+.hero-background {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* About section background */
+.about-background {
+  background-image: url("https://cdn.midjourney.com/1859afc8-cf73-4f44-9330-bdf16570c6bb/0_0.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.about-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Add glossy card effect */
+.glossy-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.glossy-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Add responsive utilities */
+.responsive-container {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Add responsive typography */
+.responsive-heading {
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
+}
+
+.responsive-subheading {
+  @apply text-xl sm:text-2xl md:text-3xl font-semibold;
+}
+
+.responsive-text {
+  @apply text-base sm:text-lg;
+}
+
+/* Add responsive grid system */
+.responsive-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Add responsive spacing */
+.responsive-section {
+  @apply py-12 sm:py-16 md:py-20 lg:py-24;
+}
+
+/* Add responsive flex layouts */
+.responsive-flex {
+  @apply flex flex-col sm:flex-row items-center;
+}
+
+/* Add marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+/* Fix alignment issues */
+.center-absolute {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-center-important {
+  text-align: center !important;
+}
+
+/* Glowing effect styles */
+.glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
