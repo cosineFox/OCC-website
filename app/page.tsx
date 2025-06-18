@@ -28,16 +28,19 @@ export default function Home() {
                   and <strong>live</strong> in a tech-based environment.
                 </p>
 
-                <div className="ascii-art mb-3">
-                  {`   ___   _____ _____ 
-  / _ \\ /  __ \\_   _|
- / /_\\ \\| /  \\/ | |  
- |  _  || |     | |  
- | | | || \\__/\\_| |_ 
- \\_| |_/ \\____/\\___/ 
+                <div className="ascii-art mb-3 tabular-nums text-center px-0 mt-0 ml-0 leading-[0.6rem]">
+                  {`   
+ ██████╗  ██████╗ ██████╗
+██╔═══██╗██╔════╝██╔════╝
+██║   ██║██║     ██║     
+██║   ██║██║     ██║     
+╚██████╔╝╚██████╗╚██████╗
+ ╚═════╝  ╚═════╝ ╚═════╝
+                         
+
                      
- Open Computing Club  
- UTP Perak - Est. 2024`}
+Open Computing Club  
+UTP Perak - Est. 2024`}
                 </div>
 
                 <p>
@@ -48,7 +51,7 @@ export default function Home() {
                 <div className="d-flex gap-2 mb-3">
                   <button
                     type="button"
-                    className="btn-win95-primary"
+                    className="btn-win95-primary mx-0 px-[1em]"
                     onClick={() => (window.location.href = "/projects")}
                   >
                     View Projects
@@ -306,7 +309,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-center mt-3">
-                  <a href="/projects" className="btn-win95-primary">
+                  <a href="/projects" className="btn-win95-primary px-[1em] py-[0.5em]">
                     Join Our Projects
                   </a>
                 </div>
