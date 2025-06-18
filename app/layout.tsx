@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "OCC - Open Computing Club | UTP Perak",
   description:
     "Open Computing Club at UTP Perak - A community for tech students to lead, learn and live in a tech-based environment.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
